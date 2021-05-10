@@ -11,6 +11,22 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'feedback',
+    loadChildren: () => import('./feedback/feedback.module').then( m => m.FeedbackPageModule)
+  },
+  {
+    path: 'two',
+    loadChildren: () => import('./two/two.module').then( m => m.TwoPageModule)
+  },
+  {
+    path: 'three',
+    loadChildren: () => import('./three/three.module').then( m => m.ThreePageModule)
+  },
+  {
+    path: 'four',
+    loadChildren: () => import('./four/four.module').then( m => m.FourPageModule)
+  },
 ];
 
 @NgModule({

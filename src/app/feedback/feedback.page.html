@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar>
+    <div class="ion-text-center"><ion-title color="tertiary">Feedback Page</ion-title></div>
+    <ion-back-button></ion-back-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <div class="ion-text-center"><ion-title color="tertiary">User Feedback is {{myFeedback}}</ion-title></div>
+    <ion-radio-group [(ngModel)]="myFeedback">
+
+  
+      <ion-item>
+        <ion-label color="secondary">Very Good</ion-label>
+        <ion-radio value="Very Good"></ion-radio>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label color="success">Good</ion-label>
+        <ion-radio value="Good"></ion-radio>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label color="medium">Average</ion-label>
+        <ion-radio value="Average"></ion-radio>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label color="warning">Bad</ion-label>
+        <ion-radio value="Bad"></ion-radio>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label color="danger">Very Bad</ion-label>
+        <ion-radio value="Very Bad"></ion-radio>
+      </ion-item>
+    </ion-radio-group>
+  </ion-list>
+  <div class="ion-text-center"><ion-button (click)="updateFeedback()">Save Feedback</ion-button></div>
+</ion-content>

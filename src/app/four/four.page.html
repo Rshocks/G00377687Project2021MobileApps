@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-toolbar>
+    <div class="ion-text-center"><ion-title color="tertiary">Your Interest</ion-title></div>
+    <ion-back-button></ion-back-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <p class="ion-text-center">Use our GPS to see your location plan your routes, closest class, gyms or lakes for all your Health kicks.</p>
+<ion-button class="ion-text-center" (click)="GPS()">GPS</ion-button>
+{{long}} {{lat}}
+
+<ion-list>
+  <div class="ion-text-center"><ion-title color="tertiary">Interest is {{myInterest}}</ion-title></div>
+  <ion-radio-group [(ngModel)]="myInterest">
+
+
+    <ion-item>
+      <ion-label color="success">Aerobics</ion-label>
+      <ion-radio value="Aerobics"></ion-radio>
+    </ion-item>
+
+    <ion-item>
+      <ion-label color="success">Athletics</ion-label>
+      <ion-radio value="Athletics"></ion-radio>
+    </ion-item>
+
+    <ion-item>
+      <ion-label color="success">Walking</ion-label>
+      <ion-radio value="Walking"></ion-radio>
+    </ion-item>
+
+    <ion-item>
+      <ion-label color="success">Swimming</ion-label>
+      <ion-radio value="Swimming"></ion-radio>
+    </ion-item>
+
+  </ion-radio-group>
+</ion-list>
+<div class="ion-text-center"><ion-button (click)="updateInterest()">Save Interest</ion-button></div>
+
+<p class="ion-text-center">Aerobics, if this is your thing then don't be afraid to get out do classes, very helpful for streching out muscles.</p>
+<p class="ion-text-center">Athletics, running can help reduce stress, also is a great way to plan out your day on a run. </p>
+<p class="ion-text-center">Walking similar to running however does not require as much effort, but a good walk for an hour can help your body loads.</p>
+<p class="ion-text-center">Swimming a tough one to preform using all muscles and you can easily run out of steam, however very rewarding when you get used to it.</p>
+<p class="ion-text-center">Swimming a tough one to preform using all muscles and you can easily run out of steam, however very rewarding when you get used to it.</p>
+</ion-content>
