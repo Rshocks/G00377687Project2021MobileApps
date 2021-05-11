@@ -9,6 +9,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { IonicStorageModule} from '@ionic/storage'; //imported for ionic storage
 import {HttpClientModule} from '@angular/common/http'; // for http etc
 import { Geolocation } from '@ionic-native/geolocation/ngx'; // plugin for location
+import { InAppBrowser } from '@ionic-native/in-app-browser/ngx'; // link to website plugin
 
 
 // added in import, IonicStorageModule, HttpClientModule, Geolocation
@@ -16,7 +17,7 @@ import { Geolocation } from '@ionic-native/geolocation/ngx'; // plugin for locat
   declarations: [AppComponent],
   entryComponents: [],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, IonicStorageModule.forRoot(), HttpClientModule],
-  providers: [Geolocation, { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
+  providers: [InAppBrowser, Geolocation, { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
